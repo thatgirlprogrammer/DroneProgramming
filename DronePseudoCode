@@ -1,0 +1,15 @@
+Drone
+CLASS Heals
+Final int maxHeals = 4 #the max number of heals
+Int numHeals = 0 #the current number of heals used
+IF button isPressed() and numHeals < maxHeals Then
+		heal()
+		numHeals++
+ELSE
+		doNothing()
+
+METHOD doNothing
+	drone.hover()
+
+METHOD Heal (drone):
+	shootLaser(drone)
